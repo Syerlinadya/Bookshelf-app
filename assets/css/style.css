@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --oranye-red: #f43e15;
+    --cyprus-color: #0d3d2f;
+    --rum-swizzle: #f1ecd5;
+    --blackcurrant: #100d1f;
+}
+
+body{
+    background: var(--cyprus-color);
+}
+body, input, button {
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    background-color: var(--rum-swizzle);
+    display: flex;
+    justify-content: space-between;
+    color: var(--blackcurrant);
+    padding: 10px 25px 15px 20px;
+    position: sticky;
+}
+.search > form {
+    width: 100%;
+}
+.search > form > input {
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    width: 250px;
+    padding: 10px 0 5px 15px ;
+}
+.search > form > button {
+    margin-top: 5px;
+    background: var(--oranye-red);
+    color: white;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+    padding: 6px;
+}
+.search > form > button > i {
+    height: 5px;
+}
+
+main{
+    margin: 50px 30px 30px 30px;
+    padding: 10px;
+}
+.input_section{
+    grid-template-columns: repeat(3, 1fr );
+    align-items: center; 
+    height: 350px;
+    display: grid;
+    /* flex-direction: row;
+    justify-content: space-evenly; */
+    border-radius: 25px;
+    background: var(--rum-swizzle);
+    color: var(--cyprus-color);
+}
+.input_section > h2 {
+    text-align: center;
+    color: var(--cyprus-color);
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+    border: none;
+}
+
+.input_section > form > button {
+    background: var(--oranye-red);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    margin: 3px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.input_section > form > .input > label {
+    color: var(--cyprus-color);
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: var(--cyprus-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+.input_section > img {
+    padding: 20px 0 0 40px;
+    height: 225px;
+    align-items: center;
+}
+
+.book_shelf{
+    width: 54rem;
+    height: 400px;
+    margin: 90px 100px 0 100px;
+    border-radius: 60px;
+    background: var(--oranye-red);
+}
+.bookshelf-list{
+    display: flex;
+    flex-direction: row;
+}
+.list-incompleted{
+    background: var(--rum-swizzle);
+	width: 50%;
+    margin: -25px 10px 20px 30px;
+    border-radius: 25px;
+	padding: 10px 30px 10px 30px;
+}
+.list-completed{
+    background: var(--rum-swizzle);
+	width: 50%;
+    margin: -25px 30px 20px 10px;
+    border-radius: 25px;
+	padding: 10px 30px 10px 30px;
+}
+.list-incompleted > h3{
+    padding: 10px;
+}
+.list-completed > h3{
+    padding: 10px;
+}
+.list-incompleted > .tittle-incompleted{
+    text-align: center;
+	color: var(--oranye-red);
+	font-size: 1em;
+	font-weight: 700;
+}
+.list-completed > .tittle-completed{
+    text-align: center;
+	color: var(--cyprus-color);
+	font-size: 1em;
+	font-weight: 700;
+}
+
+.list-completed > .tittle-completed > #incompleteBookshelf{
+    padding: 30px 20px 10px 20px;
+	border-radius: 20px;
+    color: var(--blackcurrant);
+	margin-bottom: 20px;
+}
+
+.list-completed > .tittle-completed > #completeBookshelf{
+    padding: 30px 20px 10px 20px;
+	border-radius: 20px;
+	margin-bottom: 20px;
+    color: var(--rum-swizzle);
+}
+
+
+.completedList{
+    margin: 0 auto;
+	margin-top: 30px;
+    padding-top: 20px;
+	width: 90%;
+	height: 2px;
+}
+
+.incompletedList{
+    margin: 0 auto;
+	margin-top: 30px;
+    padding-top: 20px;
+	width: 90%;
+	height: 2px;
+}
+.bookTittle {
+	font-weight: 800;
+}
+
+.btn-done, .btn-submit{
+    background: #00d073 ;
+}
+
+.btn-delete, .btn-cancel-edit{
+    background: var(--oranye-red);
+}
+
+.btn-edit{
+    background: #0073ff;
+}
+
+.btn-done,
+.btn-delete, .btn-edit {
+	border: none;
+	padding: 10px;
+	margin: 10px 5px 0 5px;
+	border-radius: 10px;
+	font-family: 0.5em;
+	font-weight: 600;
+	cursor: pointer;
+    color: var(--rum-swizzle);
+}
+
+.modal{
+    display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 200px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.modalEdit{
+    display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalEdit p {
+    font-size: 1.5em;
+	font-weight: 800;
+	text-align: center;
+}
+
+.modalEdit input{
+    margin: 8px 0;
+    border: none;
+}
+
+.modal-content {
+	background: var(--rum-swizzle);
+	margin: auto;
+	padding: 20px;
+	width: 40%;
+	border-radius: 20px;
+}
+
+.modal p {
+	font-weight: 800;
+}
+
+.btn-submit, .btn-cancel-edit{
+	border: none;
+	width: 200px;
+	padding: 10px;
+	border-radius: 10px;
+	color: var(--rum-swizzle);
+	font-size: 1em;
+	margin: 10px 0 10px 0;
+	height: fit-content;
+}
+
+
+.btn-iya,
+.btn-tidak {
+	border: none;
+	height: fit-content;
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-size: 1em;
+	margin: 10px 10px 10px 0;
+	cursor: pointer;
+}
+
+.btn-iya {
+	background: #00d073;
+	color: white;
+	font-weight: 800;
+	margin-top: 25px;
+}
+
+.btn-tidak {
+	background: var(--oranye-red);
+	color: white;
+	font-weight: 800;
+	margin-top: 25px;
+}
+
+@media (max-width: 760px) { 
+    .input_section > h2 {
+        font-size: 16px;
+    }
+    .input_section > form > button {
+        width:90%;
+    }
+    .input_section > form > .input > label,
+    .input_section > form > .input_inline > label {
+        font-size: 16px;
+    }
+    .input_section > form > .input > input {
+        display: block;
+        width: 100%;
+        margin: 3px;
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+    }
+    .input_section > img {
+        width: 90%;
+    }
+    .book_shelf{
+        margin: 90px 25px 0 25px;
+        width: 30rem;
+    }
+    
+    .list-incompleted > .tittle-incompleted{
+        font-size: 16px;
+    }
+    .list-completed > .tittle-completed{
+        font-size: 16px;
+    }
+    
+    .list-completed > .tittle-completed > #incompleteBookshelf{
+        font-size: 16px;
+    }
+    
+    .list-completed > .tittle-completed > #completeBookshelf{
+        font-size: 16px;
+    }
+    
+    .btn-done,
+    .btn-delete, .btn-edit {
+	border: none;
+	padding: 5px;
+	margin: 10px 5px 0 5px;
+	border-radius: 10px;
+	font-family: 12px;
+	font-weight: 600;
+	cursor: pointer;
+    color: var(--rum-swizzle);
+}
+}
