@@ -119,10 +119,7 @@ main{
 }
 
 .book_shelf{
-    width: 54rem;
-    height: 400px;
-    margin: 90px 100px 0 100px;
-    border-radius: 60px;
+    margin: 3rem;
     background: var(--oranye-red);
 }
 .bookshelf-list{
@@ -307,7 +304,7 @@ main{
 	margin-top: 25px;
 }
 
-@media (max-width: 760px) { 
+@media screen and (min-width: 768px) { 
     .input_section > h2 {
         font-size: 16px;
     }
@@ -330,8 +327,8 @@ main{
         width: 90%;
     }
     .book_shelf{
-        margin: 90px 25px 0 25px;
-        width: 30rem;
+        padding: 3rem 0;
+        border-radius: 2.5rem;
     }
     
     .list-incompleted > .tittle-incompleted{
